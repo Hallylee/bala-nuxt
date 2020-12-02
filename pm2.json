@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "iask-bala-nuxt",
+      "script": "./server/index.js",
+      "cwd": "./",
+      "watch": false,
+      "exec_mode": "cluster_mode",
+      "min_uptime": "60s",
+      "instances": 3,
+      "error_file": "/data/log/iask-bala-nuxt/app-err.log",
+      "out_file": "/data/log/iask-bala-nuxt/app-out.log",
+      "merge_logs": true,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "max_restarts": 30,
+      "autorestart": true,
+      "env_production": {
+        "NODE_ENV": "production"
+      },
+      "env_test": {
+        "NODE_ENV": "test"
+      }
+    }
+  ]
+}

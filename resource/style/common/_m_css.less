@@ -1,0 +1,104 @@
+//X 和 Y 轴的 2D 倾斜转换
+.transform-x(@x,@y) {
+  -webkit-transform: skew(@x, @y);
+  transform: skew(@x, @y);
+}
+//缩放
+.transform-scale(@x,@y) {
+  -webkit-transform: scale(@x, @y);
+  transform: scale(@x, @y);
+}
+//2d转换
+.transform-2d(@x,@y) {
+  -webkit-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+//旋转
+.transform-rotate(@deg) {
+  -webkit-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+//设置旋转元素的基点位置
+.transform-origin(@x:center,@y:center) {
+  -webkit-transform-origin: @x @y;
+  transform-origin: @x @y;
+}
+//css 直线渐变
+.grad-liner(@angle:top,@color1,@color2) {
+  background: -webkit-linear-gradient(@angle, @color1, @color2);
+  background: linear-gradient(@angle, @color1, @color2);
+}
+//transition
+.transition(@name,@time,@timing) {
+  -webkit-transition: @name @time @timing;
+  transition: @name @time @timing;
+}
+//flex 布局
+.flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+//伸缩流方向
+.flex-column() {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.flex-row() {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+//X轴对齐
+.justify-flex-center() {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.justify-flex-end() {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.justify-flex-justify() {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+//Y轴对齐
+.align-items-start() {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.align-items-end() {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.align-items-center() {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.align-items-baseline {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+}
+//伸缩性
+.flex(@num) {
+  -webkit-box-flex: @num;
+  -webkit-flex: @num;
+  flex: @num;
+}
+//弹出层
+.dialog() {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  .transform-2d(-50%, -50%);
+  z-index: 9999;
+}
